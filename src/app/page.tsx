@@ -1,15 +1,14 @@
-import { cards } from "@/data/demo-cards";
+import { posts } from "@/data/demo-cards";
 import Card from "../components/Card";
-import { ICard } from "@/interfaces/ICard";
+import { IPost } from "@/interfaces/IPost";
+import Postview from "@/components/Postview";
 
 export default function Home() {
-  const data: ICard[] = cards;
+  const data: IPost[] = posts;
 
   return (
-    <div className='pt-10 p-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8'>
-      {data.map((data, index) => (
-        <Card data={data} key={index} />
-      ))}
+    <div className='pt-10 p-5'>
+      <Postview posts={data} />
     </div>
   );
 }
