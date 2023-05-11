@@ -1,6 +1,6 @@
-import { ICard } from "@/interfaces/ICard";
+import { IPost } from "@/interfaces/IPost";
 
-export const cards: ICard[] = [
+export const posts: IPost[] = [
     {
         id: 1,
         title: "This is a card",
